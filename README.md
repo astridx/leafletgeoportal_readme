@@ -55,6 +55,27 @@ body
 
 ## Geoserver
 
+### Installation
+
+1. Stoppen Sie den GeoServer
+
+2. Entpacken Sie die beigefügte Zip-Datei auf dem GeoServer im Verzeichnis C:\Program Files (x86)\GeoServer 2.15.1\webapps\
+
+3. Benennen Sie den Ordner
+C:\Program Files (x86)\GeoServer 2.15.1\webapps\geoportal
+um in
+C:\Program Files (x86)\GeoServer 2.15.1\webapps\geoportal_sik
+
+4. Bennen Sie den Ordner
+C:\Program Files (x86)\GeoServer 2.15.1\webapps\geoportal_v1_0_x__xxxx_xx_xx 
+um in
+C:\Program Files (x86)\GeoServer 2.15.1\webapps\geoportal
+
+5. Passen Sie eventuelle Änderungen in der Konfiguration an.
+
+6. Starten Sie den GeoServer wieder.
+
+
 ### Konfiguration
 
 #### CORS
@@ -547,10 +568,12 @@ auf `anzeigen` gesetzt ist.
 ### TreeLayers
 
 #### Besonderheiten
+Das Controll zum Einblenden und Ausblenden der Layer wird immer rechts oben angezeigt. 
+
 #### Konfiguration
 ```
 	"TreeLayers": {
-		"position": "bottomright",
+		"position": "topright",
 		"collapsed": true,
 		"namedToggle": true,
 		"baseTree": [{
@@ -563,44 +586,7 @@ auf `anzeigen` gesetzt ist.
 							"titel": "KRE_ALKIS",
 							"properties": {
 								"id": "DEBBAL650003XlMY",
-								"id_hash": "aec26c728b24ecdfa578e858a83b3abe",
-								"area": 2635.44726799473,
-								"kennung": 11001,
-								"convnr": 7,
-								"convnr2": 7,
-								"beginnt": "2015-10-14T04:40:32Z",
-								"endet": null,
-								"std_modell": "DLKM",
-								"son_modell": null,
-								"gmk_lan": "12",
-								"gmk_gmn": "3649",
-								"fsn_zae": "114",
-								"fsn_nen": null,
-								"fsk": "12364900500114______",
-								"flstalb": "1236490050011400000",
-								"afl": 2730,
-								"fln": 5,
-								"fsf": null,
-								"arz": false,
-								"rbv": null,
-								"zfm": null,
-								"obkx": 366393.168,
-								"obky": 5847596.529,
-								"zde": "1000-01-01",
-								"gkz_lan": "12",
-								"gkz_rbz": "0",
-								"gkz_krs": "65",
-								"gkz_gem": "165",
-								"gkz_gmt": null,
-								"istgebucht": "DEBBAL010008Xtdq",
-								"istgebucht_hash": "513d808326c441f93329ef415a741734",
-								"sk": "2028",
-								"dprio": 700,
-								"overlay": "AX_Flurstueck",
-								"geotyp": 3,
-								"gemeindename": "Kremmen",
-								"gemarkungsname": "Kremmen",
-								"marker": null
+								...
 							},
 							"layers": "KRE_ALKIS",
 							"format": "image/png",
@@ -624,23 +610,10 @@ auf `anzeigen` gesetzt ist.
 								"layer": {
 									"url": "/KRE_KANAL/wms",
 									"titel": "aw_anschldruckl",
+									"add": true,
 									"properties": {
 										"material": "Polyethylen",
-										"id_utilisation": 14,
-										"utilisation": "Druckabfluss, Schmutzwassersystem",
-										"disposition_state": "vorhanden (in Betrieb)",
-										"name_number": "ADL Spargelhof",
-										"name_number_1": null,
-										"diameter_inside": null,
-										"diameter_outside": null,
-										"length": 1045.79532637,
-										"input_z": null,
-										"output_z": null,
-										"pipe_length": null,
-										"pipe_slope": null,
-										"aw_baujahr": 2016,
-										"dimension_1": "100.00000000",
-										"function": "Haltung ,Transportkanal"
+										...
 									},
 									"layers": "aw_anschldruckl",
 									"format": "image/png",
@@ -651,324 +624,50 @@ auf `anzeigen` gesetzt ist.
 									"attribution": "NTI CWSM GmbH"
 								},
 								"name": "aw_anschldruckl"
-							}, {
-								"label": "aw_anschlussleitung",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"titel": "aw_anschlussleitung",
-									"properties": {
-										"material": "Steinzeug",
-										"id_utilisation": 10,
-										"utilisation": "Freispiegelabfluss im geschlossenen Profil, Schmutzwassersystem",
-										"name_number": "KR_00001269",
-										"name_number_1": null,
-										"diameter_inside": null,
-										"diameter_outside": null,
-										"id_function": 1,
-										"input_z": 36.68,
-										"output_z": 36.29,
-										"pipe_length": null,
-										"pipe_slope": null,
-										"length": 5.88110542,
-										"aw_laenge": null,
-										"aw_baujahr": 1995,
-										"dimension_1": "150.00000000",
-										"disposition_state": "vorhanden (in Betrieb)",
-										"function": "Haltung ,Transportkanal"
-									},
-									"layers": "aw_anschlussleitung",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_anschlussleitung"
-							}, {
-								"label": "aw_anschlusspunkt",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"titel": "aw_anschlusspunkt",
-									"properties": {
-										"ownership": null,
-										"utilisation": "Freispiegelabfluss im geschlossenen Profil, Schmutzwassersystem",
-										"id_utilisation": 10,
-										"name_number": "KR_00001367",
-										"name_number_1": null,
-										"disposition_state": "vorhanden (in Betrieb)",
-										"aw_baujahr": null,
-										"id_aw_punktkennung": 1,
-										"aw_punktkennung": "Anschlusspunkt allgemein"
-									},
-									"layers": "aw_anschlusspunkt",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_anschlusspunkt"
-							}, {
-								"label": "aw_druckleitung",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"titel": "aw_druckleitung",
-									"layers": "aw_druckleitung",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_druckleitung"
-							}, {
-								"label": "aw_pumpwerk",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"titel": "aw_druckleitung",
-									"properties": {
-										"id_disposition_state": 6,
-										"material": "Polyethylen",
-										"id_utilisation": 14,
-										"utilisation": "Druckabfluss, Schmutzwassersystem",
-										"name_number": "PW_Flatow 01",
-										"name_number_1": null,
-										"disposition_state": "vorhanden (in Betrieb)",
-										"diameter_inside": null,
-										"diameter_outside": null,
-										"input_z": 35.5,
-										"output_z": 41.49,
-										"pipe_length": null,
-										"pipe_slope": null,
-										"length": 592.17881149,
-										"aw_laenge": null,
-										"aw_baujahr": 2011,
-										"dimension_1": "90.00000000",
-										"function": "Haltung ,Transportkanal",
-										"total_length": 592.17881149
-									},
-									"layers": "aw_pumpwerk",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_pumpwerk"
-							}, {
-								"label": "ww_manhole",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"titel": "ww_manhole",
-									"properties": {
-										"orientation": 0,
-										"aw_gelaendehoehe": null,
-										"bottom_elevation": 37.06,
-										"ownership": null,
-										"material": null,
-										"utilisation": "Freispiegelabfluss im geschlossenen Profil, Schmutzwassersystem",
-										"aw_baujahr": 1995,
-										"function": null,
-										"name_number": "KR_00001271",
-										"name_number_1": null,
-										"id_function": 16,
-										"id_disposition_state": 6,
-										"disposition_state": "vorhanden (in Betrieb)",
-										"id_mhole_lower_part_shape": null,
-										"id_utilisation": 10
-									},
-									"layers": "ww_manhole",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.5,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "ww_manhole"
-							}, {
-								"label": "ww_section",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"titel": "ww_section",
-									"properties": {
-										"material": "Steinzeug",
-										"id_utilisation": 10,
-										"id_lining": null,
-										"input_z": 37.16,
-										"output_z": 36.57,
-										"pipe_length": 43.50995014,
-										"pipe_slope": 0.01356136,
-										"utilisation": "Freispiegelabfluss im geschlossenen Profil, Schmutzwassersystem",
-										"name_number": "KR_K2.7",
-										"name_number_1": null,
-										"disposition_state": "vorhanden (in Betrieb)",
-										"diameter_inside": null,
-										"diameter_outside": null,
-										"length": 43.50594972,
-										"aw_laenge": 43.50995014,
-										"aw_baujahr": 1995,
-										"dimension_1": "200.00000000",
-										"function": "Haltung ,Transportkanal",
-										"total_length": 43.50594972
-									},
-									"layers": "ww_section",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "ww_section"
-							}, {
-								"label": "ww_valve",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"titel": "ww_valve",
-									"properties": {
-										"test": "test"
-									},
-									"layers": "ww_valve",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "ww_valve"
-							}]
+							}, ...
+							]
 					}, {
 						"label": "Kremmen Kanal Beschriftung",
-						"selectAllCheckbox": true,
-						"children": [{
-								"label": "aw_anschldruckl_tbl",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "aw_anschldruckl_tbl",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_anschldruckl_tbl"
-							}, {
-								"label": "aw_anschlussleitung_tbl",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "aw_anschlussleitung_tbl",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_anschlussleitung_tbl"
-							}, {
-								"label": "aw_anschlusspunkt_tbl",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "aw_anschlusspunkt_tbl",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_anschlusspunkt_tbl"
-							}, {
-								"label": "aw_druckleitung_tbl",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "aw_druckleitung_tbl",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_druckleitung_tbl"
-							}, {
-								"label": "aw_pumpwerk_tbl",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "aw_pumpwerk_tbl",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "aw_pumpwerk_tbl"
-							}, {
-								"label": "ww_manhole_tbl",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "ww_manhole_tbl",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.5,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "ww_manhole_tbl"
-							}, {
-								"label": "ww_section_tbl_bs",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "ww_section_tbl_bs",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "ww_section_tbl_bs"
-							}, {
-								"label": "ww_section_tbl_fs",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "ww_section_tbl_fs",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "ww_section_tbl_fs"
-							}, {
-								"label": "ww_valve_tbl",
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-									"layers": "ww_valve_tbl",
-									"format": "image/png",
-									"maxZoom": 20,
-									"minZoom": 0,
-									"transparent": true,
-									"opacity": 0.9,
-									"attribution": "NTI CWSM GmbH"
-								},
-								"name": "ww_valve_tbl"
-							}]
+						...
 					}]
 			}]
 	},
 
 ```
+
+```
+		"overlaysTree": [{
+				..
+				"children": [{
+						...
+						"children": [{
+								...
+								"layer": {
+									"url": "/KRE_KANAL/wms",
+```
+
+```
+		"overlaysTree": [{
+				..
+				"children": [{
+						...
+						"children": [{
+								...
+								"layer": {
+									"titel": "aw_anschldruckl",
+```
+
+```
+		"overlaysTree": [{
+				..
+				"children": [{
+						...
+						"children": [{
+								...
+								"layer": {
+									"add": true,
+```
+
 #### Sprachdateien
 
 
@@ -1106,12 +805,23 @@ auf `anzeigen` gesetzt ist.
 
 #### Besonderheiten
 #### Konfiguration
+
+##### Optionen
 ```
 	"Toolbar": {
 		"show": true,
 		"text": "Geoportal des Zweckverband Kremmen"
 	},
 ```
+
+```
+"show": true,
+```
+
+```
+"text": "Geoportal des Zweckverband Kremmen"
+```
+
 #### Sprachdateien
 
 ### Sidebar
