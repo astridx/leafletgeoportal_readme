@@ -571,9 +571,23 @@ auf `anzeigen` gesetzt ist.
 Das Controll zum Einblenden und Ausblenden der Layer wird immer rechts oben angezeigt. 
 
 #### Konfiguration
+
+In den TreeLayer können über die Konfiguration unterschiedlichen Layer eingefügt werden.
+
+
+* `collapsed`: `<Boolean>` Soll der Baum von anfang an aufgeklappt sein?
+* `namedToggle`: `<Boolean>` Zeigt den Namen anklickbar an, um die Anzeige des Layers ein- oder auszuschalten. 
+* `baseTree`: `<Object>` or `<Array>` Basisebene
+* `overlayTree`: `<Object>` or `<Array>` Overlays.
+* `children`: `<Array>` Layer, die im LayerTree angezeigt werden sollen.
+* `options`: `<Object>` Optionen von `L.Control.Layer` [options](http://leafletjs.com/reference-1.4.0.html#control-layers)
+
+* `add`: `<Boolean>` Overlay soll zu Beginn hinzugefügt werden oder nicht.
+* `titel": <String>` Titel der im Popup als Überschrift angzeigt wird.
+* `properties`: `<Object>` Eigenschaften (Datenbanktabellenspalten) die im Popup agezeigt werden sollen. 
+
 ```
 	"TreeLayers": {
-		"position": "topright",
 		"collapsed": true,
 		"namedToggle": true,
 		"baseTree": [{
@@ -633,39 +647,6 @@ Das Controll zum Einblenden und Ausblenden der Layer wird immer rechts oben ange
 			}]
 	},
 
-```
-
-```
-		"overlaysTree": [{
-				..
-				"children": [{
-						...
-						"children": [{
-								...
-								"layer": {
-									"url": "/KRE_KANAL/wms",
-```
-
-```
-		"overlaysTree": [{
-				..
-				"children": [{
-						...
-						"children": [{
-								...
-								"layer": {
-									"titel": "aw_anschldruckl",
-```
-
-```
-		"overlaysTree": [{
-				..
-				"children": [{
-						...
-						"children": [{
-								...
-								"layer": {
-									"add": true,
 ```
 
 #### Sprachdateien
